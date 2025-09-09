@@ -15,6 +15,7 @@ const textBottom = document.querySelector(".text:last-child");
 const valveLetter = document.querySelector(".valve-letter");
 const pageInput = document.querySelector(".pageInput");
 const navSelect = document.getElementById("navSelect");
+const userNote = document.querySelector(".user-note");
 const set = new Set([2, 3, 4, 5, 11, 17, 23, 29, 33, 38, 42]);
 const pageIndicator = document.querySelector(".page-indicator");
 const socialIcons = document.querySelector(".social-icons");
@@ -299,6 +300,7 @@ textBottom?.addEventListener("transitionend", () => {
     navSelect?.classList.add("visible");
     pageInput?.classList.add("visible");
     socialIcons?.classList.add("visible");
+    userNote?.classList.add("active");
   }, 500);
 
   // if (isScrollingDown && !userChangedInput) {
@@ -418,6 +420,7 @@ function handleScroll(scrollY) {
       pageIndicator?.classList.remove("visible");
       navSelect?.classList.remove("visible");
       pageInput?.classList.remove("visible");
+      userNote?.classList.remove("active");
       socialIcons?.classList.remove("visible");
     }, 500);
 
@@ -502,6 +505,7 @@ function updateCurrentPage() {
     pageIndicator?.classList.remove("visible");
     navSelect?.classList.remove("visible");
     pageInput?.classList.remove("visible");
+    userNote?.classList.remove("active");
     navbar?.classList.remove("visible");
     navbar.style.display = "none";
     socialIcons?.classList.remove("visible");
@@ -509,6 +513,7 @@ function updateCurrentPage() {
     pageIndicator?.classList.add("visible");
     navSelect?.classList.add("visible");
     pageInput?.classList.add("visible");
+    userNote?.classList.add("active");
     navbar?.classList.add("visible");
     navbar.style.display = "flex";
     socialIcons?.classList.add("visible");
